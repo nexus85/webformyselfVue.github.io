@@ -2,11 +2,17 @@ new Vue({
     el: ".app",
 
     data: {
+        x: 0,
+        y: 0
 
     },
     methods: {
-        clickOnGoogle: function(event) {
-            event.preventDefault(); //отменяем стандарное поведение
+        // clickOnGoogle: function(event) {
+        //     event.preventDefault(); //отменяем стандарное поведение
+        // }
+        handleMouseMove: function(event) {
+            this.x = event.clientX;
+            this.y = event.clientY;
         }
     }
 

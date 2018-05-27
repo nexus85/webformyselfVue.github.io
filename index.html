@@ -16,10 +16,16 @@
 
 
         <h2>
-            <a target="_blank" @click="clickOnGoogle" href="https://glogle.com">
+            <a target="_blank" @click.prevent="" href="https://glogle.com">
                 Google</a>
         </h2>
 
+        <h2 @mousemove="handleMouseMove">
+            X : {{x}}, Y {{y}}
+            <span @mousemove.stop="">
+                Не изменять
+            </span>
+        </h2>
 
 
 
