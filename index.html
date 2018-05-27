@@ -18,8 +18,10 @@
         <h2>Счетчик = {{counter}}</h2>
         <button @click="riseCounter">Увеличить</button>
         <button @click="downCounter">Уменьшить</button>
-        <button @click="toNull">сбросить</button> hr
-
+        <button @click="toNull">сбросить</button>
+        <hr>
+        <h2 @mouseover="onHover">Счетчик 2: {{counter2}}</h2>
+        <button @click="counter2++">Увеличить2</button>
 
 
         <!-- <h2 v-html="html">

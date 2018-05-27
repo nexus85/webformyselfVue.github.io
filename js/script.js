@@ -2,7 +2,8 @@ new Vue({
     el: ".app",
     data: {
 
-        counter: 0
+        counter: 0,
+        counter2: 0
 
 
 
@@ -13,7 +14,12 @@ new Vue({
     },
     methods: {
         riseCounter: function() {
-            this.counter += 1;
+            if (this.counter == 10) {
+                this.counter >= 10;
+            } else {
+                this.counter += 1;
+            }
+
         },
         downCounter: function() {
             if (this.counter > 0) {
@@ -25,6 +31,13 @@ new Vue({
         },
         toNull: function() {
             this.counter = 0;
+        },
+        onHover: function(event) {
+            //event
+            event.target.style.color = "red"
+        },
+        outHover: function(event) {
+            event.target.style.color = "black";
         }
     }
 
