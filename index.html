@@ -15,12 +15,16 @@
 
 
 
-        <h2>Счетчик = {{counter}}</h2>
-        <button @click="riseCounter">Увеличить</button>
+        <h2>Счетчик = {{counter}} ({{title }}) </h2>
+        <input type="text" v-model="num">
+        <br>
+        <button @click="riseCounter(num, 'изменне на 5', $event)">Увеличить N</button>
+        <button @click="riseCounter(5, 'изменне на 5', $event)">Увеличить 5</button>
+        <button @click="riseCounter(10, 'изменне на 10', $event)">Увеличить 10</button>
         <button @click="downCounter">Уменьшить</button>
         <button @click="toNull">сбросить</button>
         <hr>
-        <h2 @mouseover="onHover">Счетчик 2: {{counter2}}</h2>
+        <h2 @mouseover="onHover" @mouseout="outHover">Счетчик 2: {{counter2}}</h2>
         <button @click="counter2++">Увеличить2</button>
 
 

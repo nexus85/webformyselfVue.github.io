@@ -3,7 +3,9 @@ new Vue({
     data: {
 
         counter: 0,
-        counter2: 0
+        counter2: 0,
+        title: "",
+        num: 5
 
 
 
@@ -13,11 +15,21 @@ new Vue({
         // html: "<a href='http://google.com'>link<a>"
     },
     methods: {
-        riseCounter: function() {
-            if (this.counter == 10) {
-                this.counter >= 10;
+        riseCounter: function(count, str, event) {
+            count = +count;
+            if (this.counter >= 100) {
+                this.counter = 100;
             } else {
-                this.counter += 1;
+                this.counter += count;
+                this.title = str;
+                // this.title = (count * 22) + " руб."
+                if (count == 5) {
+                    //blue
+                    event.target.style.color = 'blue'
+                } else if (count == 10) {
+                    //red
+                    event.target.style.color = 'red'
+                }
             }
 
         },
@@ -26,6 +38,7 @@ new Vue({
                 this.counter -= 1
             } else {
                 this.counter = 0
+
 
             }
         },
